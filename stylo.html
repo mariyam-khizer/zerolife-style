@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+    <title>Document</title>
+</head>
+<body>
+    <div class="prenav">
+        <div class="delivery">Use code "freedelivery" at checkout to get free delievry on prepaid orders</div>
+        <div class="support">03367176348 support@stylo.pk</div>
+    </div>
+
+    <div class="logo-container">
+        <div class="empty"></div>
+        <div class="logo"> <img src="https://stylo.pk/cdn/shop/files/110x60-Logo_45_140x.png?v=1705411679"></div>
+        <div class="icons">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-duotone fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </div>
+        <ul class="navbar">
+            <li class="nav-list1">Back To School</li>
+            <li class="nav-list2">Summer'24</li>
+            <li class="nav-list3">Women Shoes</li>
+            <li class="nav-list4">Women Apparels</li>
+            <li class="nav-list5">Bags</li>
+            <li class="nav-list6">Kids</li>
+            <li class="nav-list7">Accessories</li>
+            <li class="nav-list8">Fragrances</li>
+        </ul>
+    </div>
+
+
+    <div #swiperRef="" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="https://stylo.pk/cdn/shop/files/1920x600_f3abb785-a9d4-4f3f-bf1a-39f0d44c7e02.jpg?v=1722358291"></div>
+          <div class="swiper-slide"><img src="https://stylo.pk/cdn/shop/files/1920x600_4_88a43786-990a-4dbe-9894-1e38f33fa77d.jpg?v=1721385925"></div>
+          <div class="swiper-slide"><img src="https://stylo.pk/cdn/shop/files/01_84b23f8f-81b3-430b-8074-8bf1dd4bec2c_720x.jpg?v=1714975573"></div>
+          <div class="swiper-slide"><img src="https://lcci.pk/wp-content/uploads/2020/11/Stylo-Shoes-Style-IJ.jpg"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    
+      <p class="append-buttons">
+        <button class="prepend-2-slides">Prepend 2 Slides</button>
+        <button class="prepend-slide">Prepend Slide</button>
+        <button class="append-slide">Append Slide</button>
+        <button class="append-2-slides">Append 2 Slides</button>
+      </p>
+
+
+
+
+    <hr/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          centeredSlides: true,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+    
+        var appendNumber = 4;
+        var prependNumber = 1;
+        document
+          .querySelector(".prepend-2-slides")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            swiper.prependSlide([
+              '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+              '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+            ]);
+          });
+        document
+          .querySelector(".prepend-slide")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            swiper.prependSlide(
+              '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
+            );
+          });
+        document
+          .querySelector(".append-slide")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            swiper.appendSlide(
+              '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
+            );
+          });
+        document
+          .querySelector(".append-2-slides")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            swiper.appendSlide([
+              '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+              '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+            ]);
+          });
+      </script>
+
+<div class="box1"></div>
+
+
